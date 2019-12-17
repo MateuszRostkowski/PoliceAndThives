@@ -62,6 +62,7 @@ function gameOver(who) {
   thiev.classList.add("crashed");
   console.log(cop.classList);
   clearInterval(count);
+  box.classList.add('crash')
 
   keys = [];
 
@@ -78,6 +79,7 @@ function gameOver(who) {
 function startGame() {
   startCount();
   randomSpawn();
+  box.classList.remove('crash')
 
   msgBox.innerText = "Catch the thieve";
 
