@@ -57,7 +57,7 @@ let makerandom = setInterval(() => {
     Math.random() >= 0.5,
     Math.random() >= 0.5,
   ]
-}, 200)
+}, 800)
 
 function animate() {
   player1.box.style.left = player1.x + "px";
@@ -79,16 +79,16 @@ function animate() {
   }  
   // enemy.x -= moveSpeed
   if (randomDirections[0] && enemy.x > 0) {
-    enemy.x -= moveSpeed;
+    enemy.x -= moveSpeed / 2;
   }
   if (randomDirections[1] && enemy.y  > 0) {
-    enemy.y -= moveSpeed;
+    enemy.y -= moveSpeed / 2 ;
   }
   if (randomDirections[2] && enemy.x < board.offsetWidth - enemy.w) {
-    enemy.x += moveSpeed;
+    enemy.x += moveSpeed / 2;
   }
   if (randomDirections[3] && enemy.y < board.offsetHeight - enemy.h) {
-    enemy.y += moveSpeed;
+    enemy.y += moveSpeed / 2;
   } 
   // console.log(keys);
   DomControl.checkCollision(player1.box, enemy.box, DomControl.endGame);
